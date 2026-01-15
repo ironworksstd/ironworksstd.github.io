@@ -1,297 +1,162 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Fall Ball — Privacy Policy</title>
-    <style>
-      :root {
-        --bg: #f7f9fb;
-        --card: #ffffff;
-        --muted: #6b7280;
-        --accent: #0066cc;
-        --radius: 12px;
-        --maxw: 900px;
-        --pad: 20px;
-        --print-bg: #fff;
-      }
-
-      /* Dark theme variables */
-      [data-theme="dark"] {
-        --bg: linear-gradient(180deg, #0b1220, #07111a 60%);
-        --card: #0b1218;
-        --muted: #9aa6b2;
-        --accent: #4ea8ff;
-        --text: #e6eef8;
-        --print-bg: #000;
-      }
-
-      * {
-        box-sizing: border-box
-      }
-
-      body {
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        background: var(--bg);
-        margin: 0;
-        color: var(--text);
-        -webkit-font-smoothing: antialiased;
-        padding: 48px 16px;
-        display: flex;
-        justify-content: center;
-      }
-
-      .container {
-        width: 100%;
-        max-width: var(--maxw);
-      }
-
-      header {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        margin-bottom: 18px;
-      }
-
-      .brand {
-        width: 64px;
-        height: 64px;
-        border-radius: 12px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center
-      }
-
-      .brand img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        border-radius: 12px
-      }
-
-      h1 {
-        font-size: 20px;
-        margin: 0
-      }
-
-      p.lead {
-        margin: 6px 0 0;
-        color: var(--muted)
-      }
-
-      .card {
-        background: var(--card);
-        border-radius: var(--radius);
-        box-shadow: 0 6px 30px rgba(12, 18, 30, 0.06);
-        padding: var(--pad);
-        margin-top: 12px;
-      }
-
-      /* soften shadow for dark */
-      [data-theme="dark"] .card {
-        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-      }
-
-      .meta {
-        display: flex;
-        gap: 12px;
-        color: var(--muted);
-        font-size: 13px
-      }
-
-      nav.toc {
-        margin-top: 12px;
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap
-      }
-
-      nav.toc a {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 13px
-      }
-
-      .policy {
-        margin-top: 18px
-      }
-
-      .section {
-        border-left: 4px solid transparent;
-        padding: 14px 14px;
-        border-radius: 8px;
-        margin-bottom: 12px;
-      }
-
-      .section h2 {
-        font-size: 16px;
-        margin: 0 0 8px
-      }
-
-      .section p {
-        margin: 0 0 8px;
-        color: var(--text)
-      }
-
-      .muted {
-        color: var(--muted);
-        font-size: 13px
-      }
-
-      details {
-        background: #fbfdff;
-        padding: 12px;
-        border-radius: 10px;
-        border: 1px solid #eef2f7
-      }
-
-      /* details dark adjustments */
-      [data-theme="dark"] details {
-        background: #081018;
-        border-color: #0f2230
-      }
-
-      summary {
-        font-weight: 700;
-        cursor: pointer
-      }
-
-      footer {
-        margin-top: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap
-      }
-
-      .btn {
-        background: var(--accent);
-        color: white;
-        padding: 10px 14px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-
-      @media print {
-        body {
-          background: var(--print-bg);
-          padding: 0
-        }
-
-        .card {
-          box-shadow: none;
-          border-radius: 0
-        }
-      }
-
-      /* small utilities for a visible theme indicator (optional) */
-      .theme-indicator {
-        font-size: 12px;
-        color: var(--muted);
-        display: flex;
-        gap: 8px;
-        align-items: center
-      }
-
-      .theme-indicator button {
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        color: var(--muted);
-        padding: 6px 8px;
-        border-radius: 8px;
-        cursor: pointer
-      }
-    </style>
-  </head>
-  <body>
-    <main class="container" role="main">
-      <header>
-        <div class="brand"><img src="assets/logo.png" alt="Fall Ball logo" /></div>
-        <div>
-          <h1>Fall Ball — Privacy Policy</h1>
-          <p class="lead">Last updated: January 15, 2026</p>
-          <div class="meta"><span class="muted">IronWorks Studios</span></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fall Ball — Privacy Policy</title>
+  <style>
+    :root{
+      --bg:#f7f9fb; --card:#ffffff; --muted:#6b7280; --accent:#0066cc;
+      --radius:12px; --maxw:900px; --pad:20px;
+      --print-bg: #fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg),#eef3f8 60%);
+      margin:0; color:#0f1724; -webkit-font-smoothing:antialiased;
+      padding:48px 16px;
+      display:flex; justify-content:center;
+    }
+    .container{width:100%; max-width:var(--maxw);}
+    header{display:flex; gap:16px; align-items:center; margin-bottom:18px;}
+    .brand{width:64px;height:64px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .brand img{width:100%;height:100%;object-fit:cover;display:block;border-radius:12px}
+    h1{font-size:20px; margin:0}
+    p.lead{margin:6px 0 0; color:var(--muted)}
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:0 6px 30px rgba(12,18,30,0.06);
+      padding:var(--pad); margin-top:12px;}
+    .meta{display:flex; gap:12px; color:var(--muted); font-size:13px}
+    nav.toc{margin-top:12px; display:flex; gap:8px; flex-wrap:wrap}
+    nav.toc a{color:var(--accent); text-decoration:none; font-weight:600; font-size:13px}
+    .policy{margin-top:18px}
+    .section{border-left:4px solid transparent; padding:14px 14px; border-radius:8px; margin-bottom:12px;}
+    .section h2{font-size:16px; margin:0 0 8px}
+    .section p{margin:0 0 8px; color:#223}
+    .muted{color:var(--muted); font-size:13px}
+    details{background:#fbfdff; padding:12px; border-radius:10px; border:1px solid #eef2f7}
+    summary{font-weight:700; cursor:pointer}
+    footer{margin-top:18px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+    .btn{background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700;}
+    @media print{
+      body{background:var(--print-bg); padding:0}
+      .card{box-shadow:none; border-radius:0}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="brand">
+        <img src="assets/logo.png" alt="Fall Ball logo" />
+      </div>
+      <div>
+        <h1>Fall Ball — Privacy Policy</h1>
+        <p class="lead">Last updated: January 15, 2026</p>
+        <div class="meta">
+          <span class="muted">IronWorks Studios</span>
         </div>
-      </header>
-      <article class="card" aria-labelledby="policy-title">
-        <h2 id="policy-title" style="display:none">Privacy Policy</h2>
-        <nav class="toc" aria-label="Table of contents"><a href="#intro">Introduction</a><a href="#data">Data we collect</a><a href="#storage">Storage & retention</a><a href="#iap">In-app purchases</a><a href="#unity">Unity & third parties</a><a href="#ads">Ads / tracking</a><a href="#share">Data sharing</a><a href="#security">Security</a><a href="#children">Children</a><a href="#contact">Contact</a><a href="#changes">Changes</a></nav>
-        <section id="intro" class="policy section">
-          <h2>Introduction</h2>
-          <p>IronWorks Studios ("we", "our", "us") respects your privacy. This Privacy Policy explains how we collect, use, store, and protect personal data when you use the mobile game Fall Ball. By using Fall Ball you agree to the practices described below.</p>
-        </section>
-        <section id="data" class="policy section">
-          <h2>Data we collect</h2>
-          <p class="muted"><strong>Name:</strong> If you choose to provide a player name, that name is stored locally on your device.</p>
-          <p class="muted">No other personal data is collected by the game itself.</p>
-        </section>
-        <section id="storage" class="policy section">
-          <h2>Storage and retention</h2>
-          <p class="muted"><strong>Local storage only:</strong> All data collected by Fall Ball (the player name and any offline save data) is stored only on your device. We do not transmit or back up this data to our servers or any third party.</p>
-          <p class="muted"><strong>Retention:</strong> Data remains on your device until you delete the app, clear the app data, or change/delete the name within the game.</p>
-        </section>
-        <section id="iap" class="policy section">
-          <h2>In-app purchases</h2>
-          <p class="muted">Fall Ball offers in-app purchases. Purchases are processed through the platform’s app store (e.g., Apple App Store, Google Play). Payment information and purchase records are handled by the platform; we do not collect or store your payment details.</p>
-          <p class="muted">Receipts and purchase history are managed by the app store and subject to their policies.</p>
-        </section>
-        <section id="unity" class="policy section">
-          <h2>Unity services and third‑party processing (important)</h2>
-          <p class="muted"><strong>Use of Unity services:</strong> Fall Ball may integrate Unity Technologies’ services (for example: Unity Analytics, Unity Ads, Unity Authentication, Unity Cloud Diagnostics, Unity In-App Purchasing, Unity Multiplayer, Unity Performance Reporting, and other Unity Services). If you enable or we use any Unity service, Unity may collect device and usage data as described in Unity’s documentation.</p>
-          <p class="muted">Typical data that Unity services can collect includes: installation identifiers, device identifiers, device model, OS version, IP address, crash logs, performance metrics, session and usage telemetry, and aggregated analytics. Unity services may also process custom events if the game sends them.</p>
-          <p class="muted"><strong>Your data with Unity:</strong> Unity acts as a third‑party processor/controller for any data collected by their services. We do not send the locally-stored player name to Unity, and by default Fall Ball does not transmit personal data off-device. If Unity services are enabled in the future, Unity’s servers may receive telemetry and non-identifying technical data unless collection is explicitly disabled or consent is obtained.</p>
-          <p class="muted"><strong>What this means for you:</strong> If you want to keep Fall Ball strictly local-only, do not enable Unity services that transmit telemetry. If Unity services are enabled, you may need to consent to telemetry collection depending on your jurisdiction and device settings. We will not share personal data (beyond what Unity collects via its SDKs) or sell it.</p>
-        </section>
-        <section id="ads" class="policy section">
-          <h2>No ads / tracking (current status)</h2>
-          <p class="muted">Fall Ball does not contain advertisements.</p>
-          <p class="muted">We do not use third‑party advertising or tracking services that collect personal data while the game remains configured for local-only saves.</p>
-        </section>
-        <section id="share" class="policy section">
-          <h2>Data sharing and disclosure</h2>
-          <p class="muted">We do not share, sell, or disclose your personal data to third parties except as described above for Unity services if enabled, or as required by law.</p>
-          <p class="muted">Because we store player names and saves locally, we cannot access or provide that data from our servers.</p>
-        </section>
-        <section id="security" class="policy section">
-          <h2>Security</h2>
-          <p class="muted">Local data protection: Device-level security (screen lock, backups you enable) determines protection for locally stored data. Keep device software updated and use built-in security features.</p>
-          <p class="muted">App safeguards: We implement reasonable measures to protect local save files within the app; however, no local storage is entirely immune to compromise.</p>
-        </section>
-        <section id="children" class="policy section">
-          <h2>Children</h2>
-          <p class="muted">Fall Ball is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you are a parent or guardian who becomes aware that your child provided us with personal data, please delete the app or contact us.</p>
-        </section>
-        <section id="contact" class="policy section">
-          <h2>Contact</h2>
-          <p class="muted">For questions or requests regarding this Privacy Policy, contact: <a href="mailto:ironworks@yaani.com">ironworks@yaani.com</a></p>
-        </section>
-        <section id="changes" class="policy section">
-          <h2>Changes to this policy</h2>
-          <p class="muted">We may update this Privacy Policy from time to time. The “Last updated” date at the top will reflect the most recent changes. Major changes will be communicated via app updates or in-app notices where feasible.</p>
-        </section>
-        <footer><a class="btn" href="#" onclick="window.print();return false;">Print policy</a>
-          <div class="muted">Last updated: January 15, 2026</div>
-        </footer>
-      </article>
-    </main>
-    <script>
-      // Smooth scroll for TOC links
-      document.querySelectorAll('nav.toc a').forEach(a => {
-        a.addEventListener('click', e => {
-          e.preventDefault();
-          const id = a.getAttribute('href').slice(1);
-          const el = document.getElementById(id);
-          if (el) el.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        });
+      </div>
+    </header>
+
+    <article class="card" aria-labelledby="policy-title">
+      <h2 id="policy-title" style="display:none">Privacy Policy</h2>
+
+      <nav class="toc" aria-label="Table of contents">
+        <a href="#intro">Introduction</a>
+        <a href="#data">Data we collect</a>
+        <a href="#storage">Storage & retention</a>
+        <a href="#iap">In-app purchases</a>
+        <a href="#unity">Unity & third parties</a>
+        <a href="#ads">Ads / tracking</a>
+        <a href="#share">Data sharing</a>
+        <a href="#security">Security</a>
+        <a href="#children">Children</a>
+        <a href="#contact">Contact</a>
+        <a href="#changes">Changes</a>
+      </nav>
+
+      <section id="intro" class="policy section">
+        <h2>Introduction</h2>
+        <p>IronWorks Studios ("we", "our", "us") respects your privacy. This Privacy Policy explains how we collect, use, store, and protect personal data when you use the mobile game Fall Ball. By using Fall Ball you agree to the practices described below.</p>
+      </section>
+
+      <section id="data" class="policy section">
+        <h2>Data we collect</h2>
+        <p class="muted"><strong>Name:</strong> If you choose to provide a player name, that name is stored locally on your device.</p>
+        <p class="muted">No other personal data is collected by the game itself.</p>
+      </section>
+
+      <section id="storage" class="policy section">
+        <h2>Storage and retention</h2>
+        <p class="muted"><strong>Local storage only:</strong> All data collected by Fall Ball (the player name and any offline save data) is stored only on your device. We do not transmit or back up this data to our servers or any third party.</p>
+        <p class="muted"><strong>Retention:</strong> Data remains on your device until you delete the app, clear the app data, or change/delete the name within the game.</p>
+      </section>
+
+      <section id="iap" class="policy section">
+        <h2>In-app purchases</h2>
+        <p class="muted">Fall Ball offers in-app purchases. Purchases are processed through the platform’s app store (e.g., Apple App Store, Google Play). Payment information and purchase records are handled by the platform; we do not collect or store your payment details.</p>
+        <p class="muted">Receipts and purchase history are managed by the app store and subject to their policies.</p>
+      </section>
+
+      <section id="unity" class="policy section">
+        <h2>Unity services and third‑party processing (important)</h2>
+        <p class="muted"><strong>Use of Unity services:</strong> Fall Ball may integrate Unity Technologies’ services (for example: Unity Analytics, Unity Ads, Unity Authentication, Unity Cloud Diagnostics, Unity In-App Purchasing, Unity Multiplayer, Unity Performance Reporting, and other Unity Services). If you enable or we use any Unity service, Unity may collect device and usage data as described in Unity’s documentation.</p>
+        <p class="muted">Typical data that Unity services can collect includes: installation identifiers, device identifiers, device model, OS version, IP address, crash logs, performance metrics, session and usage telemetry, and aggregated analytics. Unity services may also process custom events if the game sends them.</p>
+        <p class="muted"><strong>Your data with Unity:</strong> Unity acts as a third‑party processor/controller for any data collected by their services. We do not send the locally-stored player name to Unity, and by default Fall Ball does not transmit personal data off-device. If Unity services are enabled in the future, Unity’s servers may receive telemetry and non-identifying technical data unless collection is explicitly disabled or consent is obtained.</p>
+        <p class="muted"><strong>What this means for you:</strong> If you want to keep Fall Ball strictly local-only, do not enable Unity services that transmit telemetry. If Unity services are enabled, you may need to consent to telemetry collection depending on your jurisdiction and device settings. We will not share personal data (beyond what Unity collects via its SDKs) or sell it.</p>
+      </section>
+
+      <section id="ads" class="policy section">
+        <h2>No ads / tracking (current status)</h2>
+        <p class="muted">Fall Ball does not contain advertisements.</p>
+        <p class="muted">We do not use third‑party advertising or tracking services that collect personal data while the game remains configured for local-only saves.</p>
+      </section>
+
+      <section id="share" class="policy section">
+        <h2>Data sharing and disclosure</h2>
+        <p class="muted">We do not share, sell, or disclose your personal data to third parties except as described above for Unity services if enabled, or as required by law.</p>
+        <p class="muted">Because we store player names and saves locally, we cannot access or provide that data from our servers.</p>
+      </section>
+
+      <section id="security" class="policy section">
+        <h2>Security</h2>
+        <p class="muted">Local data protection: Device-level security (screen lock, backups you enable) determines protection for locally stored data. Keep device software updated and use built-in security features.</p>
+        <p class="muted">App safeguards: We implement reasonable measures to protect local save files within the app; however, no local storage is entirely immune to compromise.</p>
+      </section>
+
+      <section id="children" class="policy section">
+        <h2>Children</h2>
+        <p class="muted">Fall Ball is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you are a parent or guardian who becomes aware that your child provided us with personal data, please delete the app or contact us.</p>
+      </section>
+
+      <section id="contact" class="policy section">
+        <h2>Contact</h2>
+        <p class="muted">For questions or requests regarding this Privacy Policy, contact: <a href="mailto:ironworks@yaani.com">ironworks@yaani.com</a></p>
+      </section>
+
+      <section id="changes" class="policy section">
+        <h2>Changes to this policy</h2>
+        <p class="muted">We may update this Privacy Policy from time to time. The “Last updated” date at the top will reflect the most recent changes. Major changes will be communicated via app updates or in-app notices where feasible.</p>
+      </section>
+
+      <footer>
+        <a class="btn" href="#" onclick="window.print();return false;">Print policy</a>
+        <div class="muted">Last updated: January 15, 2026</div>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('nav.toc a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
