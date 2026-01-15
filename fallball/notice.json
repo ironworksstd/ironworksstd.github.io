@@ -1,4 +1,8 @@
 {
-  "StartTime": 1768511032,
-  "EndTime": 1768521032
+  "Notice": {
+    "Content": "Bu bir test mesajıdır",
+    "Language": "Turkish",
+    "From": 1768511032,
+    "To": 1768521032
+  }
 }
