@@ -20,8 +20,8 @@
     }
     .container{width:100%; max-width:var(--maxw);}
     header{display:flex; gap:16px; align-items:center; margin-bottom:18px;}
-    .brand{width:64px; height:64px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#004a99);
-      display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:20px;}
+    .brand{width:64px; height:64px; border-radius:12px;
+           display:flex; align-items:center; justify-content:center;}
     h1{font-size:20px; margin:0}
     p.lead{margin:6px 0 0; color:var(--muted)}
     .card{background:var(--card); border-radius:var(--radius); box-shadow:0 6px 30px rgba(12,18,30,0.06);
@@ -47,7 +47,9 @@
 <body>
   <main class="container" role="main">
     <header>
-      <div class="brand" aria-hidden="true">FB</div>
+      <div class="brand">
+        <img src="assets/logo.png" alt="Fall Ball logo" />
+      </div>
       <div>
         <h1>Fall Ball — Privacy Policy</h1>
         <p class="lead">Last updated: January 15, 2026</p>
