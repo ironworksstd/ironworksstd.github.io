@@ -4,8 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>IronWorks Studios</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0f1720;
@@ -22,67 +20,46 @@
       font-family: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       background: linear-gradient(180deg,#071018 0%, #071b28 40%, #07121a 100%);
       color:#e8eef3;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:32px;
+      padding:24px;
     }
 
-    /* Container */
     .site{
       width:100%;
-      max-width:1100px;
+      max-width:1024px;
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:20px;
-      padding:36px;
+      border-radius:18px;
+      padding:30px;
       box-shadow: 0 10px 40px rgba(2,8,23,0.7);
       position:relative;
       overflow:hidden;
     }
 
-    /* Top centered logo */
+    /* Top centered logo (uses provided logo file) */
     .logo-wrap{
       display:flex;
       justify-content:center;
       align-items:center;
-      margin-top:-70px; /* pulls logo slightly above container */
-      margin-bottom:18px;
+      margin-top:-60px;
+      margin-bottom:14px;
     }
     .logo{
       display:flex;
       align-items:center;
-      gap:14px;
-      background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      padding:18px 28px;
-      border-radius:22px;
-      box-shadow: 0 8px 30px rgba(3,7,15,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      gap:12px;
+      padding:12px 18px;
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
     }
-    .mark{
-      width:64px;
-      height:64px;
-      border-radius:10px;
-      background: linear-gradient(135deg, #141a23 0%, #1f2b35 100%);
-      display:grid;
-      place-items:center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      position:relative;
-      overflow:hidden;
-    }
-    /* simple iron/gear glyph */
-    .mark::before{
-      content:"";
-      width:46px;
-      height:46px;
-      background:
-        radial-gradient(circle at 34% 28%, rgba(255,255,255,0.06) 0 6px, transparent 7px),
-        conic-gradient(from 120deg, rgba(255,94,58,0.15), transparent 60deg),
-        linear-gradient(135deg,#2b3137,#14181c);
+    .logo img{
+      width:68px;
+      height:68px;
+      object-fit:contain;
       border-radius:8px;
-      display:block;
+      background:transparent;
     }
-
     .brand {
       display:flex;
       flex-direction:column;
@@ -91,7 +68,7 @@
     }
     .brand .name{
       font-weight:800;
-      letter-spacing:0.6px;
+      letter-spacing:0.4px;
       font-size:20px;
       color:#fff;
     }
@@ -101,49 +78,52 @@
       margin-top:4px;
     }
 
-    /* Main layout */
     .main{
       display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:28px;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
       align-items:start;
       margin-top:6px;
     }
 
-    /* Left: hero/content */
     .hero{
       background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
-      padding:28px;
-      border-radius:14px;
-      min-height:320px;
+      padding:22px;
+      border-radius:12px;
+      min-height:300px;
     }
     .hero h1{
-      margin:0 0 12px 0;
-      font-size:34px;
-      letter-spacing:-0.6px;
+      margin:0 0 10px 0;
+      font-size:30px;
+      letter-spacing:-0.4px;
     }
     .hero p{
-      margin:0 0 20px 0;
+      margin:0 0 16px 0;
       color:var(--muted);
       max-width:62ch;
     }
     .cta-row{
       display:flex;
-      gap:12px;
+      gap:10px;
       flex-wrap:wrap;
-      margin-top:14px;
+      margin-top:12px;
     }
     .btn{
-      padding:12px 18px;
+      padding:10px 16px;
       border-radius:10px;
-      font-weight:600;
+      font-weight:700;
       cursor:pointer;
       border:0;
+      font-size:14px;
     }
     .btn-primary{
       background: linear-gradient(90deg,var(--accent), #ff7a55);
       color:#081018;
-      box-shadow: 0 8px 26px rgba(255,94,58,0.12), 0 2px 6px rgba(0,0,0,0.35);
+      box-shadow: 0 8px 26px rgba(255,94,58,0.12);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
     }
     .btn-ghost{
       background:transparent;
@@ -151,49 +131,61 @@
       border:1px solid rgba(255,255,255,0.06);
     }
 
-    /* Right: card */
+    .stats{
+      margin-top:18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .stat{
+      background:var(--glass);
+      padding:10px;
+      border-radius:10px;
+      min-width:110px;
+      text-align:center;
+    }
+    .stat .num{font-weight:800}
+    .stat .lbl{font-size:13px;color:var(--muted);margin-top:6px}
+
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:14px;
-      padding:18px;
-      min-height:320px;
+      border-radius:12px;
+      padding:16px;
+      min-height:300px;
     }
-    .card h3{margin:0 0 12px 0}
+    .card h3{margin:0 0 10px 0}
     .meta{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
       color:var(--muted);
       font-size:13px;
+      margin-bottom:10px;
     }
-    .game-list{
-      margin-top:12px;
-      display:grid;
-      gap:12px;
-    }
-    .game{
+
+    .featured{
       display:flex;
       gap:12px;
       align-items:center;
+      margin-top:8px;
+      flex-wrap:wrap;
     }
     .thumb{
-      width:72px;
-      height:44px;
-      border-radius:8px;
+      width:88px;
+      height:88px;
+      border-radius:10px;
       background:linear-gradient(135deg,#0f2a3a,#071827);
       flex-shrink:0;
       display:grid;
       place-items:center;
-      color:var(--muted);
-      font-size:12px;
+      overflow:hidden;
     }
-    .game .g-info{flex:1}
-    .g-info .title{font-weight:700}
-    .g-info .sub{font-size:12px;color:var(--muted)}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .g-info .title{font-weight:800;font-size:16px}
+    .g-info .sub{font-size:13px;color:var(--muted);margin-top:6px}
 
-    /* Footer */
     .footer{
-      margin-top:22px;
+      margin-top:18px;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -201,10 +193,10 @@
       font-size:13px;
     }
 
-    /* Responsive */
     @media (max-width:880px){
       .main{grid-template-columns:1fr}
       .logo-wrap{margin-top:-48px}
+      .thumb{width:76px;height:76px}
     }
   </style>
 </head>
@@ -212,7 +204,7 @@
   <div class="site">
     <div class="logo-wrap" aria-hidden="false">
       <div class="logo" role="img" aria-label="IronWorks Studios logo">
-        <div class="mark" />
+        <img src="fallball/assets/logo.png" alt="IronWorks Studios logo">
         <div class="brand">
           <div class="name">IronWorks Studios</div>
           <div class="tag">Independent Game Studio</div>
@@ -226,57 +218,41 @@
         <p>IronWorks Studios — yenilikçi oyun deneyimleri üreten küçük ama tutkulu bir ekip. Aksiyon, atmosfer ve mekanik tutarlılığı birleştiriyoruz.</p>
 
         <div class="cta-row">
-          <button class="btn btn-primary">Oyunumuzu İncele</button>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.ironworks.fallball" target="_blank" rel="noopener">Fall Ball'ı Göster</a>
           <button class="btn btn-ghost">Stüdyo Hakkında</button>
         </div>
 
-        <div style="margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-          <div style="background:var(--glass);padding:12px;border-radius:10px;text-align:center">
-            <div style="font-weight:700">Projeler</div>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">3 aktif</div>
+        <div class="stats">
+          <div class="stat">
+            <div class="num">1</div>
+            <div class="lbl">Projeler (aktif)</div>
           </div>
-          <div style="background:var(--glass);padding:12px;border-radius:10px;text-align:center">
-            <div style="font-weight:700">Ekip</div>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">12 kişi</div>
+          <div class="stat">
+            <div class="num">1</div>
+            <div class="lbl">Ekip</div>
           </div>
-          <div style="background:var(--glass);padding:12px;border-radius:10px;text-align:center">
-            <div style="font-weight:700">Motor</div>
-            <div style="color:var(--muted);font-size:13px;margin-top:6px">Unreal / Unity</div>
+          <div class="stat">
+            <div class="num">Unity</div>
+            <div class="lbl">Oyun Motoru</div>
           </div>
         </div>
       </section>
 
       <aside class="card" aria-labelledby="card-title">
-        <h3 id="card-title">Öne çıkan oyunlar</h3>
+        <h3 id="card-title">Öne çıkan oyun</h3>
         <div class="meta">
-          <span>AAA Vibes</span>
+          <span>PC & Mobil</span>
           <span>·</span>
-          <span>PC & Konsol</span>
+          <span>Casual / Arcade</span>
         </div>
 
-        <div class="game-list">
-          <div class="game">
-            <div class="thumb">AW</div>
-            <div class="g-info">
-              <div class="title">Aether Works</div>
-              <div class="sub">Aksiyon macera — 2026</div>
-            </div>
+        <div class="featured">
+          <div class="thumb">
+            <img src="fallball/assets/logo.png" alt="Fall Ball logo">
           </div>
-
-          <div class="game">
-            <div class="thumb">IR</div>
-            <div class="g-info">
-              <div class="title">Ironbound</div>
-              <div class="sub">Roguelike — Erken Erişim</div>
-            </div>
-          </div>
-
-          <div class="game">
-            <div class="thumb">MD</div>
-            <div class="g-info">
-              <div class="title">Mech Dawn</div>
-              <div class="sub">Strateji — Yakında</div>
-            </div>
+          <div class="g-info">
+            <div class="title">Fall Ball</div>
+            <div class="sub">Renkli, hızlı tempolu arcade. <a href="https://play.google.com/store/apps/details?id=com.ironworks.fallball" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;margin-left:6px;font-weight:700">Play Store'da göster</a></div>
           </div>
         </div>
 
