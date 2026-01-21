@@ -42,6 +42,85 @@
       body{background:var(--print-bg); padding:0}
       .card{box-shadow:none; border-radius:0}
     }
+
+    /* --- Mobile responsiveness additions --- */
+@media (max-width: 640px) {
+  :root{
+    --radius:10px;
+    --pad:14px;
+    --maxw:100%;
+  }
+
+  body{
+    padding:20px 12px;
+  }
+
+  .container{padding:0 6px; max-width:100%;}
+  header{
+    gap:12px;
+    align-items:flex-start;
+    padding-bottom:8px;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+  }
+  .brand{
+    width:52px;
+    height:52px;
+    flex:0 0 52px;
+  }
+  h1{font-size:18px; line-height:1.1;}
+  p.lead{font-size:13px}
+
+  .card{
+    padding:var(--pad);
+    border-radius:10px;
+  }
+
+  .meta{flex-wrap:wrap; gap:8px; font-size:12px}
+  nav.toc{
+    gap:6px;
+    margin-top:10px;
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:6px;
+  }
+  nav.toc a{
+    font-size:13px;
+    white-space:nowrap;
+    padding:6px 8px;
+    background:transparent;
+    border-radius:8px;
+  }
+
+  .policy{margin-top:12px}
+  .section{padding:12px; margin-bottom:10px}
+  .section h2{font-size:15px}
+  .section p{font-size:14px}
+
+  details{padding:10px}
+  summary{font-size:15px}
+
+  footer{flex-direction:column; align-items:flex-start; gap:8px}
+  .btn{padding:9px 12px; font-size:14px}
+  .muted{font-size:12px}
+
+  /* Improve tap targets for anchors inside policy text */
+  .policy a, nav.toc a { touch-action:manipulation; }
+
+  /* Ensure images don't overflow */
+  img{max-width:100%; height:auto; display:block;}
+}
+
+/* Optional: adjust for very small phones */
+@media (max-width: 360px) {
+  :root{ --pad:12px; --radius:8px }
+  h1{font-size:16px}
+  .brand{width:48px;height:48px}
+  .card{padding:12px}
+  .section p{font-size:13px}
+}
+    
   </style>
 </head>
 <body>
