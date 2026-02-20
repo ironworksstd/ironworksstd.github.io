@@ -8,6 +8,13 @@
       "Version": "thirteen"
     },
     {
+      "Content": "'Θα χαρούμε πολύ να αξιολογήσετε το παιχνίδι μας'",
+      "Language": "Greek",
+      "From": 1769400400,
+      "To": 1772236800,
+      "Version": "thirteen"
+    },
+    {
       "Content": "<i>'<color=#ff0050>Mmm Da Da Da</color>'                    '<color=#007fff>Da Da Da</color>'</i>",
       "Language": "Turkish",
       "From": 1769400400,
@@ -19,14 +26,14 @@
       "Language": "Turkish",
       "From": 1769400400,
       "To": 1772323200,
-      "Version": "32"
+      "Version": "twelve"
     },
     {
       "Content": "Update available!",
       "Language": "English",
       "From": 1769400400,
       "To": 1772323200,
-      "Version": "32"
+      "Version": "twelve"
     }
   ]
 }
